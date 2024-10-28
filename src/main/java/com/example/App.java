@@ -31,6 +31,19 @@ public class App extends Application {
             String resultMessage = folderCreator.createFolders(folders); // Get the result message
             
             outputLabel.setText(resultMessage); // Display it in outputLabel
+            // Check if the result message contains the user input then display the folder name in a new window
+            if(resultMessage.contains(userInput)) {
+                VBox vboxTwo = new VBox(20); 
+                Label createFolder = new Label("Created Folder:");
+                Label folderName = new Label(userInput);
+                vboxTwo.getChildren().addAll(createFolder, folderName);
+                Scene sceneTwo = new Scene(vboxTwo, 400, 200);
+                stage.setScene(sceneTwo);
+                stage.setTitle("Folder Created");
+                stage.show();
+
+
+            }
         });
 
         // Add controls to the layout

@@ -32,6 +32,7 @@ public class App extends Application {
             
             outputLabel.setText(resultMessage); // Display it in outputLabel
             // Check if the result message contains the user input then display the folder name in a new window
+            //::TODO: be able to show the folder and its contents also the path maybe
             if(resultMessage.contains(userInput)) {
                 VBox vboxTwo = new VBox(20); 
                 Label createFolder = new Label("Created Folder:");
